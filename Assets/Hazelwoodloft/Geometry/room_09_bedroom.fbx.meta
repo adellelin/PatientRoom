@@ -1,0 +1,334 @@
+fileFormatVersion: 2
+guid: 9c1288cff1d171745823b202cf9583cd
+labels:
+- drawer
+- closet
+- walk-in
+- tablelamp
+- cushion
+- bed
+- carpet
+- bedroom
+- curtain
+- windows
+- spots
+- high-end
+- luxurious
+- night
+- day
+- apartment
+- flat
+- home
+- minimal
+- design
+- household
+- room
+- furniture
+- detail
+- interior
+- architecture
+- contemporary
+- real
+- loft
+- modern
+- realistic
+- urban
+- low-poly
+- photoreal
+timeCreated: 1441067971
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: base
+    100002: base_02
+    100004: bed_02
+    100006: bed_bench
+    100008: book_01
+    100010: book_02
+    100012: Collider
+    100014: cover_01
+    100016: cover_02
+    100018: curtain_01
+    100020: curtain_rail
+    100022: cushion_01
+    100024: cushion_02
+    100026: cushion_03
+    100028: door_01
+    100030: drawers_01
+    100032: drawers_02
+    100034: flower_vase
+    100036: glass
+    100038: light_spot_1
+    100040: light_spot_10
+    100042: light_spot_11
+    100044: light_spot_2
+    100046: light_spot_3
+    100048: light_spot_4
+    100050: light_spot_5
+    100052: light_spot_6
+    100054: light_spot_7
+    100056: light_spot_8
+    100058: light_spot_9
+    100060: light_spot_table_01
+    100062: light_spot_table_02
+    100064: light_spots
+    100066: light_switches
+    100068: lounge_chair
+    100070: photo_frame_01
+    100072: photo_frame_02
+    100074: //RootNode
+    100076: room_09_bedroom_A
+    100078: room_09_bedroom_B
+    100080: room_09_bedroom_C
+    100082: walls
+    100084: window_frame
+    100086: room_09_bedrrom_glass
+    100088: high_sqaurecussion1
+    100090: high_sussionA1
+    100092: high_sussionB1
+    100094: highres_drape1
+    100096: highres_matres1
+    100098: room_09_bedroom_B_high_res
+    400000: base
+    400002: base_02
+    400004: bed_02
+    400006: bed_bench
+    400008: book_01
+    400010: book_02
+    400012: Collider
+    400014: cover_01
+    400016: cover_02
+    400018: curtain_01
+    400020: curtain_rail
+    400022: cushion_01
+    400024: cushion_02
+    400026: cushion_03
+    400028: door_01
+    400030: drawers_01
+    400032: drawers_02
+    400034: flower_vase
+    400036: glass
+    400038: light_spot_1
+    400040: light_spot_10
+    400042: light_spot_11
+    400044: light_spot_2
+    400046: light_spot_3
+    400048: light_spot_4
+    400050: light_spot_5
+    400052: light_spot_6
+    400054: light_spot_7
+    400056: light_spot_8
+    400058: light_spot_9
+    400060: light_spot_table_01
+    400062: light_spot_table_02
+    400064: light_spots
+    400066: light_switches
+    400068: lounge_chair
+    400070: photo_frame_01
+    400072: photo_frame_02
+    400074: //RootNode
+    400076: room_09_bedroom_A
+    400078: room_09_bedroom_B
+    400080: room_09_bedroom_C
+    400082: walls
+    400084: window_frame
+    400086: room_09_bedrrom_glass
+    400088: high_sqaurecussion1
+    400090: high_sussionA1
+    400092: high_sussionB1
+    400094: highres_drape1
+    400096: highres_matres1
+    400098: room_09_bedroom_B_high_res
+    2300000: base
+    2300002: base_02
+    2300004: bed_bench
+    2300006: book_01
+    2300008: book_02
+    2300010: Collider
+    2300012: cover_01
+    2300014: cover_02
+    2300016: curtain_01
+    2300018: curtain_rail
+    2300020: cushion_01
+    2300022: cushion_02
+    2300024: cushion_03
+    2300026: door_01
+    2300028: drawers_01
+    2300030: drawers_02
+    2300032: flower_vase
+    2300034: glass
+    2300036: light_spot_1
+    2300038: light_spot_10
+    2300040: light_spot_11
+    2300042: light_spot_2
+    2300044: light_spot_3
+    2300046: light_spot_4
+    2300048: light_spot_5
+    2300050: light_spot_6
+    2300052: light_spot_7
+    2300054: light_spot_8
+    2300056: light_spot_9
+    2300058: light_spot_table_01
+    2300060: light_spot_table_02
+    2300062: light_switches
+    2300064: lounge_chair
+    2300066: photo_frame_01
+    2300068: photo_frame_02
+    2300070: walls
+    2300072: window_frame
+    2300074: room_09_bedrrom_glass
+    2300076: high_sqaurecussion1
+    2300078: high_sussionA1
+    2300080: high_sussionB1
+    2300082: highres_drape1
+    2300084: highres_matres1
+    3300000: base
+    3300002: base_02
+    3300004: bed_bench
+    3300006: book_01
+    3300008: book_02
+    3300010: Collider
+    3300012: cover_01
+    3300014: cover_02
+    3300016: curtain_01
+    3300018: curtain_rail
+    3300020: cushion_01
+    3300022: cushion_02
+    3300024: cushion_03
+    3300026: door_01
+    3300028: drawers_01
+    3300030: drawers_02
+    3300032: flower_vase
+    3300034: glass
+    3300036: light_spot_1
+    3300038: light_spot_10
+    3300040: light_spot_11
+    3300042: light_spot_2
+    3300044: light_spot_3
+    3300046: light_spot_4
+    3300048: light_spot_5
+    3300050: light_spot_6
+    3300052: light_spot_7
+    3300054: light_spot_8
+    3300056: light_spot_9
+    3300058: light_spot_table_01
+    3300060: light_spot_table_02
+    3300062: light_switches
+    3300064: lounge_chair
+    3300066: photo_frame_01
+    3300068: photo_frame_02
+    3300070: walls
+    3300072: window_frame
+    3300074: room_09_bedrrom_glass
+    3300076: high_sqaurecussion1
+    3300078: high_sussionA1
+    3300080: high_sussionB1
+    3300082: highres_drape1
+    3300084: highres_matres1
+    4300000: light_switches
+    4300002: photo_frame_01
+    4300004: photo_frame_02
+    4300006: drawers_01
+    4300008: book_02
+    4300010: book_01
+    4300012: drawers_02
+    4300014: window_frame
+    4300016: curtain_rail
+    4300018: lounge_chair
+    4300020: flower_vase
+    4300022: door_01
+    4300024: curtain_01
+    4300026: walls
+    4300028: glass
+    4300030: base
+    4300032: cover_01
+    4300034: cover_02
+    4300036: cushion_01
+    4300038: cushion_02
+    4300040: cushion_03
+    4300042: base_02
+    4300044: bed_bench
+    4300046: light_spot_1
+    4300048: light_spot_2
+    4300050: light_spot_3
+    4300052: light_spot_4
+    4300054: light_spot_5
+    4300056: light_spot_6
+    4300058: light_spot_7
+    4300060: light_spot_8
+    4300062: light_spot_9
+    4300064: light_spot_10
+    4300066: light_spot_11
+    4300068: light_spot_table_01
+    4300070: light_spot_table_02
+    4300072: Collider
+    4300074: room_09_bedrrom_glass
+    4300076: high_sqaurecussion1
+    4300078: high_sussionB1
+    4300080: high_sussionA1
+    4300082: highres_drape1
+    4300084: highres_matres1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
