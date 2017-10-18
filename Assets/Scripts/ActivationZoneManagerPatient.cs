@@ -68,7 +68,7 @@ public class ActivationZoneManagerPatient : MonoBehaviour
         {
             bedActivationZoneLightObject.enabled = true;
             bedZoneLight2.enabled = true;
-            Debug.Log("light intensity " + lightIntensity);
+            //Debug.Log("light intensity " + lightIntensity);
             bedActivationZoneLightObject.GetComponent<Light>().intensity = 5.0f / bedActivationZoneOffset;
             bedZoneLight2.GetComponent<Light>().intensity = 5.0f / bedActivationZoneOffset;
             //pendulum.SetActive(true);

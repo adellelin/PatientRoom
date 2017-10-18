@@ -19,13 +19,13 @@ public class FollowCamera : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update() {
 
         // Debug.Log("movieCamera.transform.localPosition: " + movieCamera.transform.localPosition);
 
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
         transform.localPosition = movieCamera.transform.localPosition + offset;
-        //transform.rotation = movieCamera.transform.rotation + Vector3.Angle(0, 180, 0); ;
-    }
+        //transform.rotation = movieCamera.transform.rotation;
+        }
 
 }

@@ -15,6 +15,7 @@ public class GazeGestureManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+       
         instance = this;
 
         // set up a gesture recognizer to detect select gestures
@@ -43,7 +44,9 @@ public class GazeGestureManager : MonoBehaviour {
         if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
         {
             FocusedObject = hitInfo.collider.gameObject;
-            
+            //Debug.Log(FocusedObject);
+            //Debug.Log(FocusedObject.GetComponent<Renderer>().material.shader);
+            //FocusedObject.GetComponent<Renderer>().material.shader = Shader.Find("HoloToolkit/Wireframe");
         } else
         {
             // if the raycast did no hit holo, clear focused object
