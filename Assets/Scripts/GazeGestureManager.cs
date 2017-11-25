@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VR.WSA.Input;
+using UnityEngine.UI;
 
 public class GazeGestureManager : MonoBehaviour {
 
@@ -12,11 +13,23 @@ public class GazeGestureManager : MonoBehaviour {
 
     GestureRecognizer recognizer;
 
+    public GameObject chartingRhythm;
+    public GameObject chartingMedication;
+    public GameObject chartingIntervention;
+
+    //private GameObject[] toniDeskObject;
+    List<GameObject> chartingObjects = new List<GameObject>();
+
+    public GameObject[] chartingObjectContent;
+
     // Use this for initialization
     void Start () {
 
-       
         instance = this;
+
+        chartingObjects.Add(chartingRhythm);
+        chartingObjects.Add(chartingIntervention);
+        chartingObjects.Add(chartingMedication);
 
         // set up a gesture recognizer to detect select gestures
         recognizer = new GestureRecognizer();
@@ -56,6 +69,25 @@ public class GazeGestureManager : MonoBehaviour {
         // if the focused object changed, start detecting fresh gestures
         if (FocusedObject != oldFocusedObject)
         {
+
+            for (int i = 0; i < chartingObjects.Count; i++)
+            {
+                // Debug.Log(FocusedObject);
+                // Debug.Log("desk object names: " + toniDeskObjects[i]);
+
+                if (FocusedObject == chartingObjects[i])
+                {
+                    chartingObjectContent[i].SetActive(true);
+                    //toniBio.transform.Rotate(Vector3.up * 50 * Time.deltaTime, Space.Self);
+
+                    //Debug.Log("found desk object");
+                }
+                else
+                {
+                    chartingObjectContent[i].SetActive(false);
+                    //Debug.Log("can't find it");
+                }
+            }
 
             recognizer.CancelGestures();
             recognizer.StartCapturingGestures();

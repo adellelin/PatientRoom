@@ -31,7 +31,7 @@ public class movieStart : MonoBehaviour
     public void PlayMovie()
     { 
         moviePlayer.Play();
-        moviePlayer.loop = true;
+        moviePlayer.loop = false;
     }
 
     public void PauseMovie()
