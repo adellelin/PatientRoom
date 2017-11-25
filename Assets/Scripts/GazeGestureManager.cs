@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VR.WSA.Input;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class GazeGestureManager : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class GazeGestureManager : MonoBehaviour {
     public GameObject chartingRhythm;
     public GameObject chartingMedication;
     public GameObject chartingIntervention;
+
+    public VideoPlayer videoReadings;
 
     //private GameObject[] toniDeskObject;
     List<GameObject> chartingObjects = new List<GameObject>();
@@ -78,6 +81,14 @@ public class GazeGestureManager : MonoBehaviour {
                 if (FocusedObject == chartingObjects[i])
                 {
                     chartingObjectContent[i].SetActive(true);
+                    if(i == 0)
+                    {
+                        videoReadings.Play();
+                    }
+                    else
+                    {
+                        videoReadings.Stop();
+                    }
                     //toniBio.transform.Rotate(Vector3.up * 50 * Time.deltaTime, Space.Self);
 
                     //Debug.Log("found desk object");

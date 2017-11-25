@@ -13,12 +13,17 @@ namespace extOSC.Examples
         public string Address = "/1/easy/1";
         private const string _toggleAddress = "/1/toggle1";
         private const string _toggleAddress2 = "/1/toggle2";
+        private const string _toggleAddress3 = "/1/toggle3";
+        private const string _faderAddress = "/1/fader5";
         public movieStart moviePlayer;
         public Animator pulseAnimator;
-        public VideoPlayer video;
-        public GameObject videoParent;
+        public VideoPlayer videoCross;
+        public GameObject videoCrossParent;
+        public VideoPlayer videoLine;
+        public GameObject videoLineParent;
         public GameObject spherePos;
         public Text osc;
+        public Slider slider;
 
         [Header("OSC Settings")]
         public OSCReceiver Receiver;
@@ -34,7 +39,9 @@ namespace extOSC.Examples
             Receiver.Bind(Address, ReceivedMessage);
             Receiver.Bind(_toggleAddress, toggleMethod);
             Receiver.Bind(_toggleAddress2, toggleMethod2);
-         
+            Receiver.Bind(_toggleAddress3, toggleMethod3);
+            Receiver.Bind(_faderAddress, faderMethod);
+
         }
 
         #endregion
@@ -60,13 +67,13 @@ namespace extOSC.Examples
                 if (Intvalue == 1)
                 {
                     // moviePlayer.PlayMovie();
-                    video.Play();
-                    videoParent.SetActive(true);
+                    videoCross.Play();
+                    videoCrossParent.SetActive(true);
 
                 } else
                 {
-                    video.Stop();
-                    videoParent.SetActive(false);
+                    videoCross.Stop();
+                    videoCrossParent.SetActive(false);
                 }
             }
         }
@@ -74,7 +81,7 @@ namespace extOSC.Examples
         private void toggleMethod2(OSCMessage message)
         {
             float value;
-            
+
             if (message.ToFloat(out value))
             {
                 Debug.Log(value);
@@ -82,16 +89,51 @@ namespace extOSC.Examples
                 {
                     spherePos.SetActive(true);
                     pulseAnimator.SetTrigger("startPulse");
-                } else
+                }
+                else
                 {
                     pulseAnimator.SetTrigger("stopPulse");
                     spherePos.SetActive(false);
                 }
-           
+
             }
-          
-        
         }
+
+        private void toggleMethod3(OSCMessage message)
+        {
+            Debug.LogWarning("received toggle");
+            float value;
+            if (message.ToFloat(out value))
+            {
+                Debug.Log(value);
+                int Intvalue = (int)value;
+                if (Intvalue == 1)
+                {
+                    // moviePlayer.PlayMovie();
+                    videoLine.Play();
+                    videoLineParent.SetActive(true);
+
+                }
+                else
+                {
+                    videoLine.Stop();
+                    videoLineParent.SetActive(false);
+                }
+            }
+        }
+
+        private void faderMethod(OSCMessage message)
+        {
+            float value;
+            if (message.ToFloat(out value))
+            {
+
+                Debug.Log("value " + value);
+                slider.value = value;
+            }
+        }
+
+        
 
         #endregion
     }
