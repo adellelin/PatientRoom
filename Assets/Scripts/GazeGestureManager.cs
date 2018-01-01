@@ -17,8 +17,10 @@ public class GazeGestureManager : MonoBehaviour {
     public GameObject chartingRhythm;
     public GameObject chartingMedication;
     public GameObject chartingIntervention;
+    public GameObject chartingEraser;
 
     public VideoPlayer videoReadings;
+    public GameObject videoReadParent;
 
     //private GameObject[] toniDeskObject;
     List<GameObject> chartingObjects = new List<GameObject>();
@@ -33,6 +35,10 @@ public class GazeGestureManager : MonoBehaviour {
         chartingObjects.Add(chartingRhythm);
         chartingObjects.Add(chartingIntervention);
         chartingObjects.Add(chartingMedication);
+        chartingObjects.Add(chartingEraser);
+        Debug.Log(chartingObjects.Count);
+
+        videoReadParent.SetActive(false);
 
         // set up a gesture recognizer to detect select gestures
         recognizer = new GestureRecognizer();
@@ -72,33 +78,31 @@ public class GazeGestureManager : MonoBehaviour {
         // if the focused object changed, start detecting fresh gestures
         if (FocusedObject != oldFocusedObject)
         {
-
+            Debug.Log("focused on " + FocusedObject);
+            Debug.Log("focused on " + FocusedObject.GetInstanceID());
+            // Debug.Log("count" + chartingObjects.Count);
             for (int i = 0; i < chartingObjects.Count; i++)
             {
-                // Debug.Log(FocusedObject);
-                // Debug.Log("desk object names: " + toniDeskObjects[i]);
 
-                if (FocusedObject == chartingObjects[i])
+                Debug.Log("charted"+chartingObjects[i].GetInstanceID());
+                if (FocusedObject.GetInstanceID() == chartingObjects[i].GetInstanceID())
                 {
-                    chartingObjectContent[i].SetActive(true);
-                    if(i == 0)
+                    Debug.Log(i + "  looking at");
+                    if (i == 0)
                     {
+                    
                         videoReadings.Play();
+                        videoReadParent.SetActive(true);
                     }
-                    else
+                    if (i == 3)
                     {
+                        Debug.Log("eraser", chartingObjects[2]);
                         videoReadings.Stop();
+                        videoReadParent.SetActive(false);
                     }
-                    //toniBio.transform.Rotate(Vector3.up * 50 * Time.deltaTime, Space.Self);
-
-                    //Debug.Log("found desk object");
-                }
-                else
-                {
-                    chartingObjectContent[i].SetActive(false);
-                    //Debug.Log("can't find it");
                 }
             }
+
 
             recognizer.CancelGestures();
             recognizer.StartCapturingGestures();

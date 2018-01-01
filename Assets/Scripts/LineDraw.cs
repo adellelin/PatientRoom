@@ -17,7 +17,7 @@ namespace DigitalRuby.AnimatedLineRenderer
         private int line2Points = 4;
         private int line3Points = 3;
 
-        private Vector3 gameObjectPosition; 
+        private Vector3 gameObjectPosition;
 
         private void Start()
         {
@@ -33,13 +33,13 @@ namespace DigitalRuby.AnimatedLineRenderer
 
             else if (Input.GetMouseButton(0))
             {
-         
+
             }
             else if (Input.GetKey(KeyCode.R))
             {
                 AnimatedLine.ResetAfterSeconds(0.5f, null);
             }
-    
+
         }
 
         public void ResetLine()
